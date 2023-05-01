@@ -13,7 +13,7 @@ To run this application on your local machine, you will need to have Node.js and
 
 1. Clone this repository to your local machine.
    ```
-   git clone https://github.com/your-username/to-do-list.git
+   git clone https://github.com/olivertagod-pd/olivertagod-ipt2-tdl.git
    ```
 2. Navigate to the project directory.
    ```
