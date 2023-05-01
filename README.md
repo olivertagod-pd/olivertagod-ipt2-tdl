@@ -1,5 +1,3 @@
-Sure, here's a detailed README.md file for your To-Do List application:
-
 # To-Do List
 
 This is a simple web application that allows you to create a list of tasks that you need to complete. The app provides features for adding new tasks, editing existing tasks, and marking tasks as complete. It also allows you to search through your task list to quickly find the task you need.
