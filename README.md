@@ -19,7 +19,7 @@ To run this application on your local machine, you will need to have Node.js and
    ```
 2. Navigate to the project directory.
    ```
-   cd to-do-list
+   cd my-to-do-list
    ```
 3. Install the required dependencies.
    ```
