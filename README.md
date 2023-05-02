@@ -7,6 +7,7 @@ This is a simple web application created using React that allows you to create a
 - [Installation](#installation)
 - [Usage](#usage)
 - [Interface](#interface)
+- [Code Explanation](#code-explanation)
 - [Lacking](#lacking)
 
 ## Installation
@@ -63,6 +64,28 @@ Responsiveness
 ![Responsiveness - 1](https://user-images.githubusercontent.com/132123440/235561253-80e9576b-d0c3-4d38-97b3-d0b6fc564763.PNG)
 ![Responsiveness - 2](https://user-images.githubusercontent.com/132123440/235561255-dc4a6f79-cabb-4693-b3ab-426c57ec14e3.PNG)
 
-## Issues
+## Code Explanation
+The App component is the main component of the application. It uses the useState hook to maintain the state of the application.
+
+taskList is an array of objects, where each object represents a task. The initial value of taskList is an empty array.
+newTask is a string that represents the value of the input field where new tasks are added. The initial value of newTask is an empty string.
+searchQuery is a string that represents the value of the input field where users can search for specific tasks. The initial value of searchQuery is an empty string.
+The handleAddTask function is called when the user submits a new task using the "Add" button. It first prevents the default form submission behavior, then checks if the newTask is not an empty string, and if so, adds a new task object to the taskList array using the setTaskList function. The new task object includes the task text, a completed property that is initially set to false, and the timestamp of when the task was added.
+
+The handleDeleteTask function is called when the user clicks the "Delete" button for a specific task. It creates a copy of the taskList array using the spread operator, removes the task at the specified index using the splice method, and sets the new array as the state of taskList.
+
+The handleEditTask function is called when the user clicks the "Edit" button for a specific task. It creates a copy of the taskList array using the spread operator, updates the text property of the task at the specified index with the new text, and sets the new array as the state of taskList.
+
+The handleCompleteTask function is called when the user clicks the checkbox for a specific task. It creates a copy of the taskList array using the spread operator, toggles the completed property of the task at the specified index, and sets the new array as the state of taskList.
+
+The countIncompleteTasks and countCompletedTasks functions are helper functions that iterate through the taskList array and count the number of incomplete and completed tasks, respectively.
+
+The handleSearch function is called when the user types in the search input field. It sets the value of searchQuery to the current input value.
+
+The filteredTaskList variable is a filtered version of the taskList array that includes only tasks whose text property includes the searchQuery string (case-insensitive).
+
+Finally, the App component returns a JSX element that displays the search input field, the add task input field and button, the list of tasks (filtered by search query), and the count of incomplete and completed tasks.
+
+## Lacking
 
 In this program, the user doesn't have the option to arrange the task by name or date.
