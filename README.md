@@ -1,6 +1,6 @@
-# To-Do List
+# To-Do List (React App)
 
-This is a simple web application that allows you to create a list of tasks that you need to complete. The app provides features for adding new tasks, editing existing tasks, and marking tasks as complete. It also allows you to search through your task list to quickly find the task you need.
+This is a simple web application created using React that allows you to create a list of tasks that you need to complete. The app provides features for adding new tasks, editing existing tasks, and marking tasks as complete. It also allows you to search through your task list to quickly find the task you need.
 
 ## Table of Contents
 
