@@ -64,10 +64,6 @@ Responsiveness
 ![Responsiveness - 1](https://user-images.githubusercontent.com/132123440/235561253-80e9576b-d0c3-4d38-97b3-d0b6fc564763.PNG)
 ![Responsiveness - 2](https://user-images.githubusercontent.com/132123440/235561255-dc4a6f79-cabb-4693-b3ab-426c57ec14e3.PNG)
 
-## # React To-Do List
-
-This is a simple To-Do list web application built using React. It allows users to add tasks, edit existing tasks, delete tasks, mark tasks as completed, and search through their list of tasks. The number of completed and incomplete tasks is also displayed.
-
 ## Code Explanation
 
 The `App` component is the main component of the application. It uses the `useState` hook to maintain the state of the application. 
