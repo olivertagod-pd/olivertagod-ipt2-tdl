@@ -20,22 +20,23 @@ To use this app, you will need Node.js and npm installed on your machine. Once y
 
 ## Code Explanation
 
-The code uses React hooks to manage state. It defines four state variables:
+This application uses React hooks, specifically the `useState` hook, to manage the state of the task list, the new task input, and the search query input. 
 
-- `taskList`: an array of task objects
-- `newTask`: a string representing the text of the new task being added
-- `searchQuery`: a string representing the user's search query
-- `filteredTaskList`: an array of task objects that match the user's search query
+The `handleAddTask` function adds a new task to the task list when the form is submitted. If the new task input is not empty, it creates a new task object with the task text, completion status, and a timestamp. Then it updates the task list state and clears the new task input.
 
-The code defines several event handlers that modify the state based on user actions:
+The `handleDeleteTask` function deletes a task from the task list when its delete button is clicked. It uses the task's timestamp to find its index in the task list, creates a new copy of the task list without the deleted task, and updates the task list state.
 
-- `handleAddTask`: adds a new task to the `taskList` array
-- `handleDeleteTask`: removes a task from the `taskList` array
-- `handleEditTask`: updates the text of a task in the `taskList` array
-- `handleCompleteTask`: toggles the `completed` property of a task in the `taskList` array
-- `handleSearch`: updates the `searchQuery` state based on the user's search input
+The `handleEditTask` function updates a task's text when its edit button is clicked. It uses the task's timestamp to find its index in the task list, updates its text property with the new text, and updates the task list state.
 
-The code renders a form with an input field and a "Add" button, a list of tasks, and a task count summary. The list of tasks is generated dynamically based on the `filteredTaskList` state variable. The code uses CSS to style the app and provide visual feedback when a task is completed.
+The `handleCompleteTask` function toggles a task's completion status when its checkbox is clicked. It uses the task's timestamp to find its index in the task list, updates its completed property to the opposite of its current value, and updates the task list state.
+
+The `countIncompleteTasks` and `countCompletedTasks` functions count the number of incomplete and completed tasks in the task list, respectively.
+
+The `handleSearch` function updates the search query state as the user types in the search input.
+
+Finally, the `filteredTaskList` variable filters the task list to only include tasks that match the search query.
+
+The `render` function returns the app UI with a header, a search input, a form to add new tasks, a list of existing tasks, and a task count display. The task list is generated from the filtered task list variable and includes each task's text, completion status, and edit and delete buttons.
 
 ## Issues
 
