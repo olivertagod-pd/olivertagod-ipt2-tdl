@@ -7,7 +7,7 @@ This is a simple web application created using React that allows you to create a
 - [Installation](#installation)
 - [Usage](#usage)
 - [Interface](#interface)
-- [Issues](#issues)
+- [Lacking](#lacking)
 
 ## Installation
 
