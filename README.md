@@ -6,6 +6,7 @@ This is a simple web application that allows you to create a list of tasks that 
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Interface] (#interface)
 - [Issues](#issues)
 
 ## Installation
@@ -39,6 +40,21 @@ To use the To-Do List app, simply follow these steps:
 3. To mark a task as complete, click the checkbox before the task. The text of the task will be crossed out to indicate that it is complete.
 4. To delete a task, click the "Delete" button next to the task.
 5. To search through your task list, type in a search query in the search box at the top of the page. The list will be filtered to only show tasks that contain the search query.
+
+## Interface
+
+Here is the interface of this program.
+
+![Main Page](https://user-images.githubusercontent.com/132123440/235561262-407c6097-f1ee-4f23-93fc-79ea386e50a8.PNG)
+![Adding of Task](https://user-images.githubusercontent.com/132123440/235561266-fd08fc3f-7223-44e8-8424-113066854f18.PNG)
+![Marking of task as done](https://user-images.githubusercontent.com/132123440/235561270-703ad46f-c456-4371-8887-700a21e268af.PNG)
+![Editing a Task](https://user-images.githubusercontent.com/132123440/235561272-f1edf13c-a556-471b-9f39-d41b9a5b1623.PNG)
+![Updated Task](https://user-images.githubusercontent.com/132123440/235561274-22089be0-d71f-4084-9fcd-8d8975e22334.PNG)
+![Removing a Task - 1](https://user-images.githubusercontent.com/132123440/235561276-4de46a3f-9138-431f-bf3d-ef48ccf62948.PNG)
+![Removing a Task - 2](https://user-images.githubusercontent.com/132123440/235561250-94f85387-6a40-46a4-88ba-0d2e8b04038c.PNG)
+![Responsiveness - 1](https://user-images.githubusercontent.com/132123440/235561253-80e9576b-d0c3-4d38-97b3-d0b6fc564763.PNG)
+![Responsiveness - 2](https://user-images.githubusercontent.com/132123440/235561255-dc4a6f79-cabb-4693-b3ab-426c57ec14e3.PNG)
+
 
 ## Issues
 
