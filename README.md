@@ -35,7 +35,7 @@ To run this application on your local machine, you will need to have Node.js and
 To use the To-Do List app, simply follow these steps:
 
 1. Type in a new task in the input box provided, and click the "Add" button to add it to your task list.
-2. To edit an existing task, click the "Edit" button next to the task, and a prompt will appear where you can edit the text of the task. Click "Update" to save your changes.
+2. To edit an existing task, click the "Edit" button next to the task, and a prompt will appear where you can edit the text of the task. Click "Ok" to save your changes.
 3. To mark a task as complete, click the checkbox before the task. The text of the task will be crossed out to indicate that it is complete.
 4. To delete a task, click the "Delete" button next to the task.
 5. To search through your task list, type in a search query in the search box at the top of the page. The list will be filtered to only show tasks that contain the search query.
