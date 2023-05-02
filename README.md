@@ -6,7 +6,7 @@ This is a simple web application that allows you to create a list of tasks that 
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Interface] (#interface)
+- [Interface] (#interfaces)
 - [Issues](#issues)
 
 ## Installation
