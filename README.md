@@ -20,23 +20,23 @@ To use this app, you will need Node.js and npm installed on your machine. Once y
 
 ## Code Explanation
 
-This application uses React hooks, specifically the useState hook, to manage the state of the task list, the new task input, and the search query input.
+This application uses React hooks, specifically the `useState` hook, to manage the state of the task list, the new task input, and the search query input. 
 
-The handleAddTask function adds a new task to the task list when the form is submitted. If the new task input is not empty, it creates a new task object with the task text, completion status, and a timestamp. Then it updates the task list state and clears the new task input.
+The `handleAddTask` function adds a new task to the task list when the form is submitted. If the new task input is not empty, it creates a new task object with the task text, completion status, and a timestamp. Then it updates the task list state and clears the new task input.
 
-The handleDeleteTask function deletes a task from the task list when its delete button is clicked. It uses the task's timestamp to find its index in the task list, creates a new copy of the task list without the deleted task, and updates the task list state.
+The `handleDeleteTask` function deletes a task from the task list when its delete button is clicked. It uses the task's timestamp to find its index in the task list, creates a new copy of the task list without the deleted task, and updates the task list state.
 
-The handleEditTask function updates a task's text when its edit button is clicked. It uses the task's timestamp to find its index in the task list, updates its text property with the new text, and updates the task list state.
+The `handleEditTask` function updates a task's text when its edit button is clicked. It uses the task's timestamp to find its index in the task list, updates its text property with the new text, and updates the task list state.
 
-The handleCompleteTask function toggles a task's completion status when its checkbox is clicked. It uses the task's timestamp to find its index in the task list, updates its completed property to the opposite of its current value, and updates the task list state.
+The `handleCompleteTask` function toggles a task's completion status when its checkbox is clicked. It uses the task's timestamp to find its index in the task list, updates its completed property to the opposite of its current value, and updates the task list state.
 
-The countIncompleteTasks and countCompletedTasks functions count the number of incomplete and completed tasks in the task list, respectively.
+The `countIncompleteTasks` and `countCompletedTasks` functions count the number of incomplete and completed tasks in the task list, respectively.
 
-The handleSearch function updates the search query state as the user types in the search input.
+The `handleSearch` function updates the search query state as the user types in the search input.
 
-Finally, the filteredTaskList variable filters the task list to only include tasks that match the search query.
+Finally, the `filteredTaskList` variable filters the task list to only include tasks that match the search query.
 
-The render function returns the app UI with a header, a search input, a form to add new tasks, a list of existing tasks, and a task count display. The task list is generated from the filtered task list variable and includes each task's text, completion status, and edit and delete buttons.
+The `render` function returns the app UI with a header, a search input, a form to add new tasks, a list of existing tasks, and a task count display. The task list is generated from the filtered task list variable and includes each task's text, completion status, and edit and delete buttons.
 
 ## Issues
 
