@@ -6,7 +6,7 @@ This is a simple web application created using React that allows you to create a
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Interfaces](#interfaces)
+- [Interface](#interface)
 - [Issues](#issues)
 
 ## Installation
