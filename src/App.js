@@ -20,17 +20,25 @@ function App() {
     setTaskList(newList);
   };
 
-  const handleEditTask = (index, newText) => {
-    const newList = [...taskList];
-    newList[index].text = newText;
-    setTaskList(newList);
+  const handleEditTask = (taskId, newText) => {
+    const index = taskList.findIndex(task => task.added === taskId);
+    if (index !== -1) {
+      const newList = [...taskList];
+      newList[index].text = newText;
+      setTaskList(newList);
+    }
   };
+  
 
-  const handleCompleteTask = (index) => {
-    const newList = [...taskList];
-    newList[index].completed = !newList[index].completed;
-    setTaskList(newList);
+  const handleCompleteTask = (taskId) => {
+    const index = taskList.findIndex((task) => task.added === taskId);
+    if (index !== -1) {
+      const newList = [...taskList];
+      newList[index].completed = !newList[index].completed;
+      setTaskList(newList);
+    }
   };
+  
 
   const countIncompleteTasks = () => {
     let count = 0;
@@ -75,12 +83,12 @@ function App() {
         {filteredTaskList.map((task, index) => (
           <li key={index} className={task.completed ? 'completed' : ''}>
             <label>
-              <input type="checkbox" checked={task.completed} onChange={() => handleCompleteTask(index)} />
+            <input type="checkbox" checked={task.completed} onChange={() => handleCompleteTask(task.added)}/>
               <span className="checkmark"></span>
               <span>{task.completed ? <del>{task.text}</del> : task.text}</span>
             </label>
             <div>
-              <button className="edit" onClick={() => handleEditTask(index, prompt('Edit task:', task.text))}>Edit</button>
+              <button className="edit" onClick={() => handleEditTask(task.added, prompt('Edit task:', task.text))}>Edit</button>
               <button onClick={() => handleDeleteTask(index)}>Delete</button>
             </div>
           </li>
