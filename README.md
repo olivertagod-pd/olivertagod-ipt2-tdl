@@ -6,7 +6,7 @@ This is a simple web application that allows you to create a list of tasks that 
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Interface] (#interfaces)
+- [Interfaces](#interfaces)
 - [Issues](#issues)
 
 ## Installation
@@ -41,7 +41,7 @@ To use the To-Do List app, simply follow these steps:
 4. To delete a task, click the "Delete" button next to the task.
 5. To search through your task list, type in a search query in the search box at the top of the page. The list will be filtered to only show tasks that contain the search query.
 
-## Interface
+## Interfaces
 
 Here is the interface of this program.
 
