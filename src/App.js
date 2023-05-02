@@ -14,11 +14,15 @@ function App() {
     }
   };
 
-  const handleDeleteTask = (index) => {
-    const newList = [...taskList];
-    newList.splice(index, 1);
-    setTaskList(newList);
+  const handleDeleteTask = (taskId) => {
+    const index = taskList.findIndex((task) => task.added === taskId);
+    if (index !== -1) {
+      const newList = [...taskList];
+      newList.splice(index, 1);
+      setTaskList(newList);
+    }
   };
+  
 
   const handleEditTask = (taskId, newText) => {
     const index = taskList.findIndex(task => task.added === taskId);
@@ -89,7 +93,7 @@ function App() {
             </label>
             <div>
               <button className="edit" onClick={() => handleEditTask(task.added, prompt('Edit task:', task.text))}>Edit</button>
-              <button onClick={() => handleDeleteTask(index)}>Delete</button>
+              <button onClick={() => handleDeleteTask(task.added)}>Delete</button>
             </div>
           </li>
         ))}
