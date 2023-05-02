@@ -45,16 +45,23 @@ To use the To-Do List app, simply follow these steps:
 
 Here is the interface of this program.
 
+Main page
 ![Main Page](https://user-images.githubusercontent.com/132123440/235561262-407c6097-f1ee-4f23-93fc-79ea386e50a8.PNG)
+Adding a task
 ![Adding of Task](https://user-images.githubusercontent.com/132123440/235561266-fd08fc3f-7223-44e8-8424-113066854f18.PNG)
+Marking of task as done
 ![Marking of task as done](https://user-images.githubusercontent.com/132123440/235561270-703ad46f-c456-4371-8887-700a21e268af.PNG)
+Editing a task
 ![Editing a Task](https://user-images.githubusercontent.com/132123440/235561272-f1edf13c-a556-471b-9f39-d41b9a5b1623.PNG)
+Task is updated after editing
 ![Updated Task](https://user-images.githubusercontent.com/132123440/235561274-22089be0-d71f-4084-9fcd-8d8975e22334.PNG)
+Removing a 2 completed tasks
 ![Removing a Task - 1](https://user-images.githubusercontent.com/132123440/235561276-4de46a3f-9138-431f-bf3d-ef48ccf62948.PNG)
+Removing a task
 ![Removing a Task - 2](https://user-images.githubusercontent.com/132123440/235561250-94f85387-6a40-46a4-88ba-0d2e8b04038c.PNG)
+Responsiveness
 ![Responsiveness - 1](https://user-images.githubusercontent.com/132123440/235561253-80e9576b-d0c3-4d38-97b3-d0b6fc564763.PNG)
 ![Responsiveness - 2](https://user-images.githubusercontent.com/132123440/235561255-dc4a6f79-cabb-4693-b3ab-426c57ec14e3.PNG)
-
 
 ## Issues
 
