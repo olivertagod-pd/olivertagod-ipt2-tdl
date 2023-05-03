@@ -70,4 +70,23 @@ When the user clicks the `Edit` button next to a task, the `handleEditTask` func
 ```javascript
 const handleEditTask = (taskId, newText) => {
   const index = taskList.findIndex((task) => task.added === taskId);
- 
+ ```
+
+### Search Task
+
+This function is used to handle the search functionality of the to-do list. It is triggered by the `onChange` event of the search input field and sets the `searchQuery` state to the value entered by the user.
+
+The `filteredTaskList` constant uses the `filter()` method to create a new array that contains only the tasks that match the search query. The `filter()` method creates a new array with all elements that pass the test implemented by the provided function. In this case, it checks whether the lowercase version of the `text` property of each task includes the lowercase version of the `searchQuery` state. 
+
+The filtered list is then rendered in the to-do list by mapping through it with the `map()` method and rendering each task as a list item.
+
+
+```javascript
+const handleSearch = (event) => {
+  setSearchQuery(event.target.value);
+};
+
+const filteredTaskList = taskList.filter((task) => 
+  task.text.toLowerCase().includes(searchQuery.toLowerCase())
+);
+```
