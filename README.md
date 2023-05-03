@@ -70,7 +70,7 @@ When the user clicks the `Edit` button next to a task, the `handleEditTask` func
 ```javascript
 const handleEditTask = (taskId, newText) => {
   const index = taskList.findIndex((task) => task.added === taskId);
- 
+ ```
 
 ### Search Task
 
