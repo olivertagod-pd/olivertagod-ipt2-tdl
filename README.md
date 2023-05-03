@@ -20,20 +20,54 @@ To use this app, you will need Node.js and npm installed on your machine. Once y
 
 ## Code Explanation
 
-This application uses React hooks, specifically the `useState` hook, to manage the state of the task list, the new task input, and the search query input. 
+### State Variables
 
-The `handleAddTask` function adds a new task to the task list when the form is submitted. If the new task input is not empty, it creates a new task object with the task text, completion status, and a timestamp. Then it updates the task list state and clears the new task input.
+The `useState` hook is used to create three state variables:
 
-The `handleDeleteTask` function deletes a task from the task list when its delete button is clicked. It uses the task's timestamp to find its index in the task list, creates a new copy of the task list without the deleted task, and updates the task list state.
+1. `taskList` - an array that contains the tasks added by the user.
+2. `newTask` - a string that represents the text entered by the user in the input field.
+3. `searchQuery` - a string that represents the text entered by the user in the search field.
 
-The `handleEditTask` function updates a task's text when its edit button is clicked. It uses the task's timestamp to find its index in the task list, updates its text property with the new text, and updates the task list state.
+```javascript
+const [taskList, setTaskList] = useState([]);
+const [newTask, setNewTask] = useState('');
+const [searchQuery, setSearchQuery] = useState('');
+```
 
-The `handleCompleteTask` function toggles a task's completion status when its checkbox is clicked. It uses the task's timestamp to find its index in the task list, updates its completed property to the opposite of its current value, and updates the task list state.
+### Add Task
 
-The `countIncompleteTasks` and `countCompletedTasks` functions count the number of incomplete and completed tasks in the task list, respectively.
+When the user submits the form by clicking the `Add` button, the `handleAddTask` function is called. This function checks if the `newTask` string is not empty, and if so, adds a new task object to the `taskList` array using the `setTaskList` function. The new task object contains the `text` of the task, whether it is `completed` or not (initially set to `false`), and the `added` timestamp.
 
-The `handleSearch` function updates the search query state as the user types in the search input.
+```javascript
+const handleAddTask = (event) => {
+  event.preventDefault();
+  if (newTask.trim() !== '') {
+    setTaskList([...taskList, { text: newTask, completed: false, added: Date.now() }]);
+    setNewTask('');
+  }
+};
+```
 
-Finally, the `filteredTaskList` variable filters the task list to only include tasks that match the search query.
+### Delete Task
 
-The `render` function returns the app UI with a header, a search input, a form to add new tasks, a list of existing tasks, and a task count display. The task list is generated from the filtered task list variable and includes each task's text, completion status, and edit and delete buttons.
+When the user clicks the `Delete` button next to a task, the `handleDeleteTask` function is called with the `added` timestamp of the task as the argument. This function finds the index of the task in the `taskList` array using the `findIndex` method, creates a new array without the task using the `splice` method, and updates the `taskList` state variable using the `setTaskList` function.
+
+```javascript
+const handleDeleteTask = (taskId) => {
+  const index = taskList.findIndex((task) => task.added === taskId);
+  if (index !== -1) {
+    const newList = [...taskList];
+    newList.splice(index, 1);
+    setTaskList(newList);
+  }
+};
+```
+
+### Edit Task
+
+When the user clicks the `Edit` button next to a task, the `handleEditTask` function is called with the `added` timestamp of the task and the new text as arguments. This function finds the index of the task in the `taskList` array using the `findIndex` method, updates the `text` of the task, and updates the `taskList` state variable using the `setTaskList` function.
+
+```javascript
+const handleEditTask = (taskId, newText) => {
+  const index = taskList.findIndex((task) => task.added === taskId);
+ 
