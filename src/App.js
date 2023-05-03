@@ -74,13 +74,13 @@ function App() {
 
   return (
     <div className="container">
-    <h1>To-Do List</h1>
+    <h1>To-Do List React App</h1>
     <div className="search" style={{ textAlign: 'right' }}>
       <input type="text" placeholder="Search tasks..." value={searchQuery} onChange={handleSearch} />
     </div>
     <br></br>
     <form onSubmit={handleAddTask}>
-      <input type="text" placeholder="Add a new task..." value={newTask} onChange={(event) => setNewTask(event.target.value)} />
+      <input type="text" placeholder="what to do?." value={newTask} onChange={(event) => setNewTask(event.target.value)} />
       <button type="submit">Add</button>
     </form>
       <ul>
